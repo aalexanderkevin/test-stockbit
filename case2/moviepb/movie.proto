@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package movie;
+option go_package="case2/moviepb";
+
+service Omdb {
+  rpc MovieSearch (SearchRequest) returns (SearchResponse) {}
+  rpc MovieDetail (DetailRequest) returns (Movie) {}
+}
+
+message SearchRequest {
+  string Search = 1;
+  string Page = 2;
+}
+
+message SearchResponse {
+  repeated Movie Search = 1;
+  string total = 2;
+  string error_message = 3;
+}
+
+message Movie {
+  string title = 1;
+  string year = 2;
+  string movieId = 3;
+  string type = 4;
+  string poster = 5;
+}
+
+message DetailRequest {
+  string id = 1;
+}

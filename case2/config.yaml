@@ -1,0 +1,14 @@
+db:
+    host: "localhost"
+    port: "3306"
+    username: "root"
+    password: ""
+    dbname: "db"
+rest:
+    host: "localhost"
+    port: "8000"
+grpc:
+    host: "localhost"
+    port: "8080"
+omdb:
+    apikey: "faf7e5bb"
